@@ -7,7 +7,7 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route path="/offer:id">
+                <Route path="/offer/:id">
                     <Offer />
                 </Route>
                 <Route path="/">
