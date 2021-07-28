@@ -5,6 +5,7 @@ import Header from '../components/Header';
 const Offer = async () => {
     const [data, setData] = useState();
     const [isLoading, setIsLoading] = useState(true);
+    // const [id] = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
