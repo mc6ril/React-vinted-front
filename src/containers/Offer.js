@@ -1,19 +1,19 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 
-const Offer = async () => {
+const Offer = () => {
     const [data, setData] = useState();
     const [isLoading, setIsLoading] = useState(true);
-    // const [id] = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    'https://project-vinted-api-backend.herokuapp.com/offers',
+                    `https://project-vinted-api-backend.herokuapp.com/offer/${id}`,
                 );
-                // console.log(response.data);
                 setData(response.data);
                 setIsLoading(false);
             } catch (error) {
@@ -23,13 +23,12 @@ const Offer = async () => {
         fetchData();
     }, []);
 
-    console.log(data);
+    console.log(id, data);
 
     return (
         <div>
             <Header />
-            Offer Page
-            {isLoading ? <span>Chargement</span> : <span>contenu chargé</span>}
+            {isLoading ? <span>Chargement</span> : <span>Contenu de l'id = {id}</span>}
         </div>
     );
 };

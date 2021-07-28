@@ -15,7 +15,7 @@ const Navigation = () => {
                         <Link to="/">S'inscrire / Se connecter</Link>
                     </li>
                     <li>
-                        <Link to="/offers">Vends tes articles</Link>
+                        <Link to="/offer/:id">Vends tes articles</Link>
                     </li>
                 </div>
             </ul>
