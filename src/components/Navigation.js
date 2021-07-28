@@ -6,8 +6,9 @@ const Navigation = () => {
         <nav>
             <ul>
                 <li>
-                    <img src={Logo} alt="logo-website" />
-                    <Link to="/"></Link>
+                    <Link to="/">
+                        <img src={Logo} alt="logo-website" />
+                    </Link>
                 </li>
 
                 <div className="buttons">

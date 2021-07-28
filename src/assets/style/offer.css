@@ -1,0 +1,74 @@
+.product-content {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.left-product-col {
+    width: 40%;
+    height: 100%;
+}
+.left-product-col img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.right-product-col {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.right-product-col .head-product {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-product-col p {
+    max-width: 620px;
+}
+.right-product-col button {
+    width: 95px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.right-product-col .basket-product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.right-product-col .basket-product button {
+    background-color: black;
+    color: white;
+    width: calc(100% - 15px - 95px);
+}
+
+.right-product-col .basket-product .buttons {
+    width: 95px;
+    height: 50px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.right-product-col .basket-product .buttons button {
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: black;
+}

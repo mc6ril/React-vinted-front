@@ -1,5 +1,6 @@
 @import './assets//style/header.css';
 @import './assets/style/home.css';
+@import './assets/style/offer.css';
 
 footer {
     display: flex;
