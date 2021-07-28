@@ -1,0 +1,47 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+nav {
+    width: 100%;
+    position: relative;
+}
+
+img {
+    width: 80px;
+    height: 100%;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+.buttons li {
+    cursor: pointer;
+    height: 30px;
+    width: 150px;
+    border: 1px solid #0ab1ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li:last-child {
+    background-color: #0ab1ba;
+}
+
+.buttons li:first-child a {
+    color: #0ab1ba;
+}
+.buttons li:last-child a {
+    background-color: #0ab1ba;
+    color: white;
+}
