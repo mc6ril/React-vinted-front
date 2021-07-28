@@ -1,5 +1,5 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './containers/Home';
 import Offer from './containers/Offer';
 
@@ -7,7 +7,7 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route path="/offer">
+                <Route path="/offer:id">
                     <Offer />
                 </Route>
                 <Route path="/">

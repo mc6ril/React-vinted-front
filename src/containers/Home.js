@@ -5,6 +5,7 @@ const Home = () => {
     return (
         <div>
             <Header />
+            <section className="wrapper">Hello</section>
             <Footer />
         </div>
     );
