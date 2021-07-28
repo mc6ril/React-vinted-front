@@ -1,6 +1,6 @@
 .product-content {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -9,6 +9,7 @@
 
 .left-product-col {
     width: 40%;
+    min-width: 25vw;
     height: 100%;
 }
 .left-product-col img {
@@ -18,7 +19,7 @@
 }
 .right-product-col {
     width: 60%;
-    height: 60%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -35,6 +36,7 @@
 
 .right-product-col p {
     max-width: 620px;
+    text-align: justify;
 }
 .right-product-col button {
     width: 95px;
@@ -71,4 +73,39 @@
     width: 100%;
     background-color: white;
     color: black;
+}
+
+@media screen and (max-width: 800px) {
+    .product-content {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 20px;
+    }
+    .left-product-col {
+        width: 100%;
+        height: 40vh;
+    }
+    .left-product-col img {
+        object-fit: contain;
+    }
+    .right-product-col {
+        width: 80vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .right-product-col .head-product {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

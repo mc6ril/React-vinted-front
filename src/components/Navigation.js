@@ -1,23 +1,20 @@
 import { Link } from 'react-router-dom';
-import Logo from '../assets/images/logo.png';
 
 const Navigation = () => {
     return (
         <nav>
             <ul>
-                <li>
-                    <Link to="/">
-                        <img src={Logo} alt="logo-website" />
-                    </Link>
-                </li>
+                <Link to="/" className="logo">
+                    <li>Mr MOUSTACHE</li>
+                </Link>
 
                 <div className="buttons">
-                    <li>
-                        <Link to="/">S'inscrire / Se connecter</Link>
-                    </li>
-                    <li>
-                        <Link to="/offer/:id">Vends tes articles</Link>
-                    </li>
+                    <Link to="/">
+                        <li>S'inscrire / Se connecter</li>
+                    </Link>
+                    <Link to="/offer/:id">
+                        <li>Vends tes articles</li>
+                    </Link>
                 </div>
             </ul>
         </nav>
