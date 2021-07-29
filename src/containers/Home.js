@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
+import Loader from '../components/Loader';
 
 const Home = () => {
     const [data, setData] = useState();
@@ -21,12 +21,15 @@ const Home = () => {
         };
         fetchData();
     }, []);
+    console.log(isLoading);
+    console.log(data);
 
     return (
         <div>
-            <Header />
             {isLoading ? (
-                <span>Chargement</span>
+                <>
+                    <Loader />
+                </>
             ) : (
                 <section className="wrapper">
                     <div className="offers">

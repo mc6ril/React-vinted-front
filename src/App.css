@@ -1,3 +1,4 @@
+@import './assets/style/loader.css';
 @import './assets//style/header.css';
 @import './assets/style/home.css';
 @import './assets/style/offer.css';
@@ -7,4 +8,11 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
+}
+footer a:last-child {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
 }

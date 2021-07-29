@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Header from '../components/Header';
+import Loader from '../components/Loader';
 
 const Offer = () => {
     const [data, setData] = useState();
@@ -26,9 +26,8 @@ const Offer = () => {
 
     return (
         <div>
-            <Header />
             {isLoading ? (
-                <span>Chargement</span>
+                <Loader />
             ) : (
                 <div className="wrapper">
                     <div className="product-content">
