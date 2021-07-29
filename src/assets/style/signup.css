@@ -1,0 +1,56 @@
+.signup,
+.login {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3vh auto 6vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 30%;
+}
+.signup h1,
+.login h1 {
+    margin: 40px auto;
+}
+
+form input,
+form input {
+    width: 65%;
+    height: 40px;
+    border: 1px solid #d1d4dd;
+}
+
+form input[type='text'],
+form input[type='email'],
+form input[type='password'],
+form input[type='phone'] {
+    font-family: 'lato';
+    font-size: 12px;
+    padding-left: 18px;
+}
+form .checkbox {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+form .checkbox input[type='checkbox'] {
+    width: auto;
+}
+
+form input[type='submit'] {
+    font-family: 'lato';
+    background-color: black;
+    color: white;
+    width: 40%;
+    margin-top: 40px;
+}

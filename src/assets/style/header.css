@@ -5,23 +5,23 @@ header {
     justify-content: center;
     height: 50px;
 }
-nav {
+header nav {
     width: 100%;
     position: relative;
 }
 
-ul {
+header ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.buttons {
+header .buttons {
     display: flex;
     gap: 10px;
 }
-.buttons a {
+header .buttons a {
     cursor: pointer;
     height: 30px;
     width: 150px;
@@ -30,14 +30,14 @@ ul {
     justify-content: center;
     align-items: center;
 }
-a:last-child {
+header a:last-child {
     background-color: #0ab1ba;
 }
 
-.buttons a:first-child li {
+header .buttons a:first-child li {
     color: #0ab1ba;
 }
-.buttons a:last-child li {
+header .buttons a:last-child li {
     background-color: #0ab1ba;
     color: white;
 }

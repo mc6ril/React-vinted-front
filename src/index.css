@@ -26,7 +26,7 @@ body {
 a {
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 li {
@@ -40,6 +40,11 @@ h2 {
 
 h4 {
     margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 1500px) {

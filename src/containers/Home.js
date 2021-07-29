@@ -21,8 +21,6 @@ const Home = () => {
         };
         fetchData();
     }, []);
-    console.log(isLoading);
-    console.log(data);
 
     return (
         <div>

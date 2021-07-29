@@ -9,7 +9,7 @@ const Navigation = () => {
                 </Link>
 
                 <div className="buttons">
-                    <Link to="/">
+                    <Link to="/login">
                         <li>S'inscrire / Se connecter</li>
                     </Link>
                     <Link to="/offer/:id">
