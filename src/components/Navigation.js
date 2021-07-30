@@ -9,8 +9,10 @@ const Navigation = ({ userToken, setUser }) => {
                     <Link to="/" className="logo">
                         <li>Mr MOUSTACHE</li>
                     </Link>
-
                     <div className="buttons">
+                        <Link to="/offers">
+                            <li>Baskets</li>
+                        </Link>
                         {userToken ? (
                             <Link
                                 to="/"
@@ -25,10 +27,6 @@ const Navigation = ({ userToken, setUser }) => {
                                 <li>S'inscrire / Se connecter</li>
                             </Link>
                         )}
-
-                        <Link to="/offers">
-                            <li>Baskets</li>
-                        </Link>
                     </div>
                 </ul>
             </div>
@@ -41,8 +39,8 @@ const Navigation = ({ userToken, setUser }) => {
                     <Link to="/" className="logo">
                         <li>Mr MOUSTACHE</li>
                     </Link>
+
                     <div className="icone">
-                        <FontAwesomeIcon icon="search" />
                         <Link to="/login">
                             <FontAwesomeIcon icon="user" />
                         </Link>

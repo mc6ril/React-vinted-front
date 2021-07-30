@@ -48,7 +48,7 @@ function App() {
                     <Login setUser={setUser} />
                 </Route>
                 <Route path="/signup">
-                    <Signup />
+                    <Signup setUser={setUser} />
                 </Route>
             </Switch>
             <Footer />

@@ -36,14 +36,45 @@ nav ul {
 
 nav .buttons {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 nav .buttons a {
     cursor: pointer;
     height: 30px;
-    width: 180px;
+    max-width: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+nav .buttons a::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: bottom left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav .buttons a:hover::before {
+    background-color: lightgray;
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+}
+.icone input[type='search'] {
+    padding-left: 10px;
+    margin-right: 5px;
+    height: 40px;
+    border: 1px solid lightgray;
 }
 
 @media screen and (max-width: 1000px) {

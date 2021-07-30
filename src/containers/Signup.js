@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { useHistory } from 'react-router';
 
 const Signup = ({ setUser }) => {
+    console.log(setUser);
     const [username, setUsername] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [image, setImage] = useState('');
+    const [errorMessage, setErrorMessage] = useState(null);
     const history = useHistory();
 
     let newUser = new FormData();
@@ -17,7 +18,6 @@ const Signup = ({ setUser }) => {
         phone: phone,
         email: email,
         password: password,
-        avatar: image,
     };
 
     const onHandleSubmit = async (e) => {
@@ -35,6 +35,9 @@ const Signup = ({ setUser }) => {
                 alert('Une erreur est survenue, veuillez réssayer.');
             }
         } catch (error) {
+            // if (error.response.status === 409) {
+            //     setErrorMessage('Cet email a déjà un compte chez nous !');
+            // }
             console.log(error.message);
         }
     };
@@ -57,6 +60,10 @@ const Signup = ({ setUser }) => {
                         setEmail(e.target.value);
                     }}
                 />
+                {errorMessage && (
+                    <span className="signup-error-message">{errorMessage}</span>
+                )}
+
                 <input
                     type="phone"
                     placeholder="Téléphone"
@@ -71,13 +78,8 @@ const Signup = ({ setUser }) => {
                         setPassword(e.target.value);
                     }}
                 />
-                <input
-                    type="file"
-                    onChange={(e) => {
-                        setImage(e.target.value);
-                    }}
-                />
-                {/* <div className="checkbox">
+
+                <div className="checkbox">
                     <input type="checkbox" name="newsletter" />
                     <label htmlFor="newsletter">S'inscrire à notre newsletter</label>
                 </div>
@@ -88,7 +90,7 @@ const Signup = ({ setUser }) => {
                         conditions et Politique de Confidentialité de Mr Moustache. Je
                         confirme avoir au moins 18 ans.
                     </label>
-                </div> */}
+                </div>
 
                 <input type="submit" value="Enregistrer" />
             </form>

@@ -15,12 +15,15 @@
 }
 
 .offers {
+    margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    row-gap: 50px;
 }
 .offers a {
     width: 100%;
@@ -41,6 +44,64 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.filter {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter .filter-button {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.filter form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 0 0 20px;
+    width: 100%;
+    font-size: 0.8em;
+}
+.filter form .inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter form input,
+.filter form label {
+    flex: 1;
+}
+.filter form input[type='search'] {
+    max-width: 150px;
+    height: 40px;
+}
+.filter form input[type='chekbox'] {
+    max-width: 150px;
+    height: 40px;
+    background-color: red;
+}
+.filter form input[type='text'] {
+    max-width: 70px;
+    height: 40px;
+}
+.filter form input[type='reset'] {
+    max-width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
 }
 
 @media screen and (max-width: 1400px) {
