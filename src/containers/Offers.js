@@ -55,7 +55,7 @@ const Offers = () => {
                         )}
 
                         {filter && (
-                            <form>
+                            <form className="offers-form">
                                 {/* Tri par prix titre */}
                                 <input
                                     type="search"

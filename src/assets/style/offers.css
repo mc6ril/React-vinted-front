@@ -61,7 +61,7 @@
     border: none;
 }
 
-.filter form {
+.filter .offers-form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -72,7 +72,8 @@
     width: 100%;
     font-size: 0.8em;
 }
-.filter form .inputs {
+
+.filter .offers-form .inputs {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -80,16 +81,20 @@
     align-items: center;
 }
 
-.filter form input[type='search'] {
+.filter .offers-form input[type='search'] {
     max-width: 150px;
     height: 40px;
 }
+.filter .offers-form input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+}
 
-.filter form input[type='text'] {
+.filter .offers-form input[type='text'] {
     max-width: 70px;
     height: 40px;
 }
-.filter form input[type='reset'] {
+.filter .offers-form input[type='reset'] {
     max-width: 100px;
     height: 40px;
     background-color: black;
@@ -132,7 +137,7 @@
     .offers a img {
         margin-bottom: 10px;
     }
-    .filter form {
+    .filter .offers-form {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -144,21 +149,21 @@
         font-size: 0.8em;
     }
 
-    .filter form .inputs {
+    .filter .offers-form .inputs {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    .filter form input[type='search'] {
+    .filter .offers-form input[type='search'] {
         width: 100%;
         padding: 10px;
     }
 
-    .filter form input[type='text'] {
+    .filter .offers-form input[type='text'] {
         max-width: 100%;
         height: 40px;
     }
-    .filter form input[type='reset'] {
+    .filter .offers-form input[type='reset'] {
         width: 100%;
         padding: 10px;
         margin: 0 auto;
