@@ -35,9 +35,9 @@ const Signup = ({ setUser }) => {
                 alert('Une erreur est survenue, veuillez réssayer.');
             }
         } catch (error) {
-            // if (error.response.status === 409) {
-            //     setErrorMessage('Cet email a déjà un compte chez nous !');
-            // }
+            if (error.response.status === 400) {
+                setErrorMessage('Cet email a déjà un compte chez nous !');
+            }
             console.log(error.message);
         }
     };
