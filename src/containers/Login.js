@@ -32,25 +32,23 @@ const Login = ({ setUser }) => {
             });
     };
 
-    const onEmailChange = (e) => {
-        let checkEmail = e.target.value;
-        setEmail(checkEmail);
-    };
-
-    const onPasswordChange = (e) => {
-        let checkPassword = e.target.value;
-        setPassword(checkPassword);
-    };
-
     return (
         <div className="login">
             <h1>Connectez vous à votre compte</h1>
             <form action="POST" onSubmit={onHandleSubmit}>
-                <input type="email" placeholder="Votre email" onChange={onEmailChange} />
+                <input
+                    type="email"
+                    placeholder="Votre email"
+                    onChange={(e) => {
+                        setEmail(e.target.value);
+                    }}
+                />
                 <input
                     type="password"
                     placeholder="Mot de passe"
-                    onChange={onPasswordChange}
+                    onChange={(e) => {
+                        setPassword(e.target.value);
+                    }}
                 />
                 <input type="submit" value="Connexion" />
                 <div>

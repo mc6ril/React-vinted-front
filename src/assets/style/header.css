@@ -1,61 +1,96 @@
 header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     height: 50px;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 header nav {
     width: 100%;
-    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .hidden-menu {
+    display: none;
 }
 
-header ul {
+nav .visible-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-header .buttons {
+nav .buttons {
     display: flex;
-    gap: 10px;
 }
-header .buttons a {
+nav .buttons a {
     cursor: pointer;
     height: 30px;
-    width: 150px;
-    border: 1px solid #0ab1ba;
+    width: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header a:last-child {
-    background-color: #0ab1ba;
-}
 
-header .buttons a:first-child li {
-    color: #0ab1ba;
-}
-header .buttons a:last-child li {
-    background-color: #0ab1ba;
-    color: white;
-}
-
-@media screen and (max-width: 500px) {
-    .logo {
-        position: relative;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .logo img {
-        width: 30vw;
-        height: 40px;
-    }
-    .buttons {
+@media screen and (max-width: 1000px) {
+    nav .visible-menu {
         display: none;
+    }
+    header nav .hidden-menu {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .burger {
+        display: block;
+        width: 42px;
+        height: 24px;
+        cursor: pointer;
+        position: relative;
+    }
+    .burger span {
+        width: 100%;
+        height: 4px;
+        background-color: black;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color 0.5s ease-in-out;
+    }
+    .burger span::before,
+    .burger span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: black;
+        transition: transform 0.5s ease-in-out;
+    }
+    .burger span::before {
+        transform: translateY(-10px);
+    }
+    .burger span::after {
+        transform: translateY(10px);
+    }
+
+    .hidden-menu svg {
+        font-size: 1.5em;
+        margin-right: 10px;
+        cursor: pointer;
     }
 }

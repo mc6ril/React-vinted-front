@@ -8,6 +8,7 @@ const Signup = ({ setUser }) => {
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [image, setImage] = useState('');
     const history = useHistory();
 
     let newUser = new FormData();
@@ -16,6 +17,7 @@ const Signup = ({ setUser }) => {
         phone: phone,
         email: email,
         password: password,
+        avatar: image,
     };
 
     const onHandleSubmit = async (e) => {
@@ -67,6 +69,12 @@ const Signup = ({ setUser }) => {
                     placeholder="Mot de passe"
                     onChange={(e) => {
                         setPassword(e.target.value);
+                    }}
+                />
+                <input
+                    type="file"
+                    onChange={(e) => {
+                        setImage(e.target.value);
                     }}
                 />
                 {/* <div className="checkbox">

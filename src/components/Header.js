@@ -1,9 +1,9 @@
 import Navigation from './Navigation';
 
-const Header = () => {
+const Header = ({ userToken, setUser }) => {
     return (
-        <header className="wrapper">
-            <Navigation />
+        <header>
+            <Navigation userToken={userToken} setUser={setUser} />
         </header>
     );
 };

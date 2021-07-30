@@ -77,12 +77,12 @@
 
 @media screen and (max-width: 800px) {
     .product-content {
-        height: 60vh;
+        height: 60%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        margin-top: 20px;
+        margin: 20px auto;
     }
     .left-product-col {
         width: 100%;

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import boutique from '../assets/images/boutique.jpg';
 import Loader from '../components/Loader';
 
 const Home = () => {
@@ -30,6 +31,9 @@ const Home = () => {
                 </>
             ) : (
                 <section className="wrapper">
+                    <div className="image">
+                        <img src={boutique} alt={boutique} />
+                    </div>
                     <div className="offers">
                         {data.offers.map((offer) => {
                             return (
