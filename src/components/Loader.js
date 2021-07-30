@@ -3,8 +3,8 @@ const Loader = () => {
         <div id="loader-wrapper">
             <div id="loader"></div>
 
-            <div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
+            <div className="loader-section section-left"></div>
+            <div className="loader-section section-right"></div>
         </div>
     );
 };
