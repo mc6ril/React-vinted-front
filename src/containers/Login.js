@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 const Login = ({ setUser }) => {
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const history = useHistory();
 
     let logUser = new FormData();

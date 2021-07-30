@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { useHistory } from 'react-router';
 
 const Signup = ({ setUser }) => {
-    const [username, setUsername] = useState();
-    const [phone, setPhone] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [username, setUsername] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const history = useHistory();
 
     let newUser = new FormData();
