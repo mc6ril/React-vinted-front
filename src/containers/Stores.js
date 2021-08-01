@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Loader from '../components/Loader';
 
 const Stores = () => {
     const [stores, setStores] = useState([]);
@@ -16,7 +17,9 @@ const Stores = () => {
         fetchData();
     }, []);
 
-    return (
+    return isLoading ? (
+        <Loader />
+    ) : (
         <div className="wrapper">
             <h2 className="title-section">Nos échoppes</h2>
             <div className="stores">
