@@ -1,18 +1,32 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-const Navigation = ({ userToken, setUser }) => {
+const Navigation = ({ userToken, setUser, setMenu, menu }) => {
     return (
         <nav className="wrapper">
             <div className="visible-menu">
                 <ul>
                     <Link to="/" className="logo">
-                        <li>Mr MOUSTACHE</li>
+                        <li>M.MOUSTACHE</li>
                     </Link>
-                    <div className="buttons">
+                    <div className="menu">
+                        <Link to="/offers">
+                            <li>Souliers</li>
+                        </Link>
                         <Link to="/offers">
                             <li>Baskets</li>
                         </Link>
+                        <Link to="/offers">
+                            <li>Chaussettes</li>
+                        </Link>
+                        <Link to="/brand">
+                            <li>La marque</li>
+                        </Link>
+                        <Link to="/stores">
+                            <li>Boutiques</li>
+                        </Link>
+                    </div>
+                    <div className="buttons">
                         {userToken ? (
                             <Link
                                 to="/"
@@ -23,29 +37,38 @@ const Navigation = ({ userToken, setUser }) => {
                                 <li>Se déconnecter</li>
                             </Link>
                         ) : (
-                            <Link to="/login">
-                                <li>S'inscrire / Se connecter</li>
-                            </Link>
+                            <div>
+                                <Link to="/login">
+                                    <FontAwesomeIcon icon="user" />
+                                </Link>
+                            </div>
                         )}
+                        <Link to="/basket">
+                            <li className="basket">
+                                Panier <span className="basket-value">0</span>
+                            </li>
+                        </Link>
                     </div>
                 </ul>
             </div>
 
             <div className="hidden-menu">
                 <ul>
-                    <div className="burger">
+                    <div className="burger" onClick={() => setMenu(!menu)}>
                         <span></span>
                     </div>
                     <Link to="/" className="logo">
-                        <li>Mr MOUSTACHE</li>
+                        <li>M.MOUSTACHE</li>
                     </Link>
 
                     <div className="icone">
                         <Link to="/login">
                             <FontAwesomeIcon icon="user" />
                         </Link>
-                        <Link to="/offers">
-                            <FontAwesomeIcon icon="shopping-basket" />
+                        <Link to="/basket">
+                            <li className="basket">
+                                Panier <span className="basket-value">0</span>
+                            </li>
                         </Link>
                     </div>
                 </ul>

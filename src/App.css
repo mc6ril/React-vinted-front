@@ -4,9 +4,13 @@
 @import './assets/style/offer.css';
 @import './assets/style/signup.css';
 @import './assets/style/homepage.css';
+@import './assets/style/slider.css';
+@import './assets/style/stores.css';
+@import './assets/style/brand.css';
 
 footer {
     text-align: center;
     margin-top: 10vh;
-    height: 2vh;
+    width: 100%;
+    background-color: #f3f1ec;
 }

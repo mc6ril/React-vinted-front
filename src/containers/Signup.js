@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useHistory } from 'react-router';
 
 const Signup = ({ setUser }) => {
-    console.log(setUser);
     const [username, setUsername] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');

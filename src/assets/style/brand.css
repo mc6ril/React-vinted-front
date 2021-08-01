@@ -1,0 +1,168 @@
+.brand {
+    width: 100%;
+}
+
+.brand .pink-background {
+    background-color: #f4c0bc;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.pink-background .center-div {
+    width: calc(100% - (340px * 2));
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -70%);
+}
+.pink-background .center-div h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    color: #045646;
+    font-size: 80px;
+}
+.pink-background .center-div p {
+    padding: 0 100px;
+    line-height: 20px;
+    color: #045646;
+    text-align: center;
+}
+.pink-background .center-div p:first-child {
+    margin: 70px auto 10px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.pink-background .center-div p:last-child {
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 10%;
+}
+
+.brand .grey-background {
+    background-color: #888886;
+}
+.brand .grey-background img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.brand .two-boxes {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 50vh;
+}
+.brand .two-boxes div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 85px 180px;
+}
+.brand .two-boxes div h1 {
+    font-size: 76px;
+    line-height: 91px;
+    margin-bottom: 5%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.brand .two-boxes div p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+.brand .two-boxes .first-box {
+    background-color: #045646;
+    color: #fbba42;
+}
+.brand .two-boxes .second-box {
+    color: #045646;
+    background-color: #fbba42;
+}
+.brand .brand-box {
+    display: flex;
+    flex-direction: row;
+}
+.brand .brand-box div {
+    width: 50%;
+}
+.brand .brand-box .image img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.brand .brand-box .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15%;
+}
+.brand .brand-box h5 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.brand .brand-box p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1100px) {
+    .pink-background .center-div {
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -70%);
+    }
+    .pink-background .center-div h1 {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        color: #045646;
+        font-size: 80px;
+    }
+    .pink-background .center-div p {
+        padding: 0 5%;
+        line-height: 20px;
+        color: #045646;
+        text-align: center;
+    }
+    .pink-background .center-div p:first-child {
+        margin: 20px auto;
+    }
+    .pink-background .center-div p:last-child {
+        margin-bottom: 3%;
+    }
+    .brand .two-boxes {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .brand .two-boxes div {
+        width: 100%;
+    }
+
+    .brand .brand-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .brand .brand-box div {
+        width: 100%;
+    }
+
+    .brand .brand-box:nth-child(2n) {
+        flex-direction: column-reverse;
+    }
+}

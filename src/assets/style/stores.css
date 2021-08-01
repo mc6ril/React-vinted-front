@@ -1,0 +1,19 @@
+.stores {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 80px;
+}
+.title-section {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.stores .store {
+    width: calc(100% / 2);
+}
+
+.stores .store .description {
+    text-align: center;
+}

@@ -6,6 +6,7 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 999;
 }
 header nav {
     width: 100%;
@@ -24,6 +25,12 @@ nav .visible-menu {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+nav .visible-menu .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 nav ul {
     width: 100%;
@@ -64,6 +71,23 @@ nav .buttons a:hover::before {
     background-color: lightgray;
     transform: scaleX(1);
     transform-origin: bottom right;
+}
+nav .basket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav .basket-value {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-left: 3px;
 }
 
 .icone {

@@ -1,0 +1,29 @@
+.slider-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .slider-menu {
+        display: block;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .slider-menu a {
+        font-size: 2em;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .slider-menu div {
+        border-top: 1px solid lightgray;
+        padding: 15px 0;
+    }
+    .slider-menu div:last-child {
+        border-bottom: 1px solid lightgray;
+    }
+    .slider-menu div a {
+        font-size: 1.2em;
+    }
+}
