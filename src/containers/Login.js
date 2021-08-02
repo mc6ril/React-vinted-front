@@ -25,7 +25,7 @@ const Login = ({ setUser }) => {
             .then((response) => {
                 const token = response.data.token;
                 setUser(token);
-                history.push('/');
+                history.push('/offer/publish');
             })
             .catch((error) => {
                 console.log(error.message);
