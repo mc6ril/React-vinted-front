@@ -36,13 +36,13 @@ const Offers = () => {
                     <Loader />
                 </>
             ) : (
-                <section className="wrapper">
+                <section>
                     <div className="image">
                         <img src={boutique} alt={boutique} />
                     </div>
 
                     {/* Tri  */}
-                    <div className="filter">
+                    <div className="filter wrapper">
                         {!filter && (
                             <input
                                 type="button"
@@ -106,7 +106,7 @@ const Offers = () => {
                             </form>
                         )}
                     </div>
-                    <div className="offers">
+                    <div className="offers wrapper">
                         {data.offers &&
                             data.offers.map((offer) => {
                                 return (

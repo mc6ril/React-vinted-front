@@ -45,28 +45,28 @@ function App() {
             />
             {menu ? (
                 <nav className="slider-menu">
-                    <Link to="/offers">
+                    <Link to="/offers" onClick={() => setMenu(!menu)}>
                         <li>Souliers</li>
                     </Link>
-                    <Link to="/offers">
+                    <Link to="/offers" onClick={() => setMenu(!menu)}>
                         <li>Baskets</li>
                     </Link>
-                    <Link to="/offers">
+                    <Link to="/offers" onClick={() => setMenu(!menu)}>
                         <li>Chaussettes</li>
                     </Link>
-                    <Link to="/brand">
+                    <Link to="/brand" onClick={() => setMenu(!menu)}>
                         <li>La marque</li>
                     </Link>
-                    <Link to="/stores">
+                    <Link to="/stores" onClick={() => setMenu(!menu)}>
                         <li>Boutiques</li>
                     </Link>
                     <div>
-                        <Link to="/offers">
+                        <Link to="/offers" onClick={() => setMenu(!menu)}>
                             <li>Nous contacter</li>
                         </Link>
                     </div>
                     <div>
-                        <Link to="/offers">
+                        <Link to="/offers" onClick={() => setMenu(!menu)}>
                             <li>FAQ</li>
                         </Link>
                     </div>
