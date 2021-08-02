@@ -14,8 +14,7 @@ body {
     width: calc(100vw - (350px * 2));
     margin: 0 auto;
 }
-.wrapper::before {
-    position: absolute;
+.separate {
     content: '';
     height: 1px;
     width: 100%;

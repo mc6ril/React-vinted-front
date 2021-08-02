@@ -85,9 +85,12 @@ const Signup = ({ setUser }) => {
                 <div className="checkbox">
                     <input type="checkbox" name="newsletter" />
                     <label htmlFor="newsletter">
-                        En m'inscrivant, je confirme avoir lu et accepté les termes &
-                        conditions et Politique de Confidentialité de Mr Moustache. Je
-                        confirme avoir au moins 18 ans.
+                        J'ai lu les
+                        <span className="highlight">
+                            {' '}
+                            conditions générales de ventes{' '}
+                        </span>
+                        et j'y adhère sans réserve.
                     </label>
                 </div>
 

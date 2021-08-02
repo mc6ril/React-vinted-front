@@ -9,6 +9,7 @@ const Header = ({ userToken, setUser, setMenu, menu }) => {
                 setMenu={setMenu}
                 menu={menu}
             />
+            <div className="separate"></div>
         </header>
     );
 };

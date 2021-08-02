@@ -1,0 +1,122 @@
+footer {
+    margin-top: 100px;
+    width: 100%;
+    position: relative;
+}
+
+footer .copyright {
+    height: 5vh;
+    background-color: #f3f1ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-conditions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 20px;
+    margin-bottom: 30px;
+}
+footer .footer-conditions .square {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+}
+
+footer .footer-conditions .box {
+    text-align: center;
+}
+
+footer .footer-conditions .box h2 {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+}
+footer .footer-conditions .box p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    font-style: italic;
+}
+
+footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3vh auto;
+}
+
+footer .footer-links .box {
+    max-width: calc(100% / 4);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .footer-links .box li {
+    margin-bottom: 7px;
+}
+footer .footer-links .box form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 40px;
+    margin-top: 2vh;
+}
+footer .footer-links .box form input[type='email'] {
+    max-width: 40%;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+footer .footer-links .box form input[type='submit'] {
+    background-color: white;
+    color: black;
+    width: 10%;
+}
+
+footer .footer-links .box .social-network {
+    width: 100%;
+    margin: 1vh auto;
+}
+footer .footer-links .box .social-network ul {
+    display: flex;
+    gap: 20px;
+}
+footer .footer-links .box .social-network ul i {
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 1000px) {
+    footer .footer-conditions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+    footer .footer-conditions .square {
+        display: none;
+    }
+
+    footer .footer-links {
+        display: flex;
+        flex-direction: column;
+        margin: 3vh auto;
+        width: 100%;
+    }
+
+    footer .footer-links .box {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        padding: 0 5%;
+    }
+}
+@media screen and (max-width: 500px) {
+    footer .footer-conditions {
+        display: flex;
+        flex-direction: column;
+    }
+}

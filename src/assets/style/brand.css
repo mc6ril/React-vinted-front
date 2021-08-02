@@ -90,10 +90,14 @@
 }
 .brand .brand-box div {
     width: 50%;
+    margin: 0;
+    max-height: 100vh;
 }
+
 .brand .brand-box .image img {
     width: 100%;
-    object-fit: contain;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .brand .brand-box .description {
@@ -144,6 +148,9 @@
     .pink-background .center-div p:last-child {
         margin-bottom: 3%;
     }
+    .brand .grey-background {
+        margin-top: 10vh;
+    }
     .brand .two-boxes {
         display: flex;
         flex-direction: column;
@@ -151,6 +158,7 @@
     }
     .brand .two-boxes div {
         width: 100%;
+        padding: 5.5vh;
     }
 
     .brand .brand-box {

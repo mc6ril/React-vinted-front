@@ -7,10 +7,4 @@
 @import './assets/style/slider.css';
 @import './assets/style/stores.css';
 @import './assets/style/brand.css';
-
-footer {
-    text-align: center;
-    margin-top: 10vh;
-    width: 100%;
-    background-color: #f3f1ec;
-}
+@import './assets/style/footer.css';
