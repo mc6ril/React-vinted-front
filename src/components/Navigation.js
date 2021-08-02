@@ -28,14 +28,19 @@ const Navigation = ({ userToken, setUser, setMenu, menu }) => {
                     </div>
                     <div className="buttons">
                         {userToken ? (
-                            <Link
-                                to="/"
-                                onClick={() => {
-                                    setUser(null);
-                                }}
-                            >
-                                <li>Se déconnecter</li>
-                            </Link>
+                            <div>
+                                <Link
+                                    to="/"
+                                    onClick={() => {
+                                        setUser(null);
+                                    }}
+                                >
+                                    <li>Déconnexion</li>
+                                </Link>
+                                <Link to="/offer/publish">
+                                    <li>Vente</li>
+                                </Link>
+                            </div>
                         ) : (
                             <div>
                                 <Link to="/login">
@@ -61,10 +66,28 @@ const Navigation = ({ userToken, setUser, setMenu, menu }) => {
                         <li>M.MOUSTACHE</li>
                     </Link>
 
-                    <div className="icone">
-                        <Link to="/login">
-                            <FontAwesomeIcon icon="user" />
-                        </Link>
+                    <div className="buttons">
+                        {userToken ? (
+                            <div>
+                                <Link
+                                    to="/"
+                                    onClick={() => {
+                                        setUser(null);
+                                    }}
+                                >
+                                    <li>Déconnexion</li>
+                                </Link>
+                                <Link to="/offer/publish">
+                                    <li>Vente</li>
+                                </Link>
+                            </div>
+                        ) : (
+                            <div>
+                                <Link to="/login">
+                                    <FontAwesomeIcon icon="user" />
+                                </Link>
+                            </div>
+                        )}
                         <Link to="/basket">
                             <li className="basket">
                                 Panier <span className="basket-value">0</span>

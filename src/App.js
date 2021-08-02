@@ -11,6 +11,7 @@ import Homepage from './containers/Hompage';
 import Login from './containers/Login';
 import Offer from './containers/Offer';
 import Offers from './containers/Offers';
+import Publish from './containers/Publish';
 import Signup from './containers/Signup';
 import Stores from './containers/Stores';
 
@@ -78,7 +79,10 @@ function App() {
                     <Route exact path="/offers">
                         <Offers />
                     </Route>
-                    <Route path="/offer/:id">
+                    <Route exact path="/offer/publish">
+                        <Publish userToken={userToken} />
+                    </Route>
+                    <Route exact path="/offer/:id">
                         <Offer />
                     </Route>
                     <Route path="/login">

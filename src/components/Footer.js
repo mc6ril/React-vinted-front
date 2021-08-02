@@ -98,13 +98,13 @@ const Footer = () => {
                     <div className="social-network">
                         <ul>
                             <li>
-                                <i class="fab fa-facebook-f"></i>
+                                <i className="fab fa-facebook-f"></i>
                             </li>
                             <li>
-                                <i class="fab fa-instagram-square"></i>
+                                <i className="fab fa-instagram-square"></i>
                             </li>
                             <li>
-                                <i class="fab fa-pinterest-p"></i>
+                                <i className="fab fa-pinterest-p"></i>
                             </li>
                         </ul>
                     </div>
