@@ -13,20 +13,22 @@ const CheckoutForm = ({ total, userToken, basket }) => {
             // On récupère ici les données bancaires que l'utilisateur rentre
             const cardElement = elements.getElement(CardElement);
             const stripeResponse = await stripe.createToken(cardElement, {
-                name: userToken,
+                name: 'Je suis un user',
             });
 
-            // console.log(stripeResponse);
+            console.log(stripeResponse);
 
             const response = await axios.post(
                 'https://project-vinted-api-backend.herokuapp.com/payment',
                 {
                     amount: total,
+                    currency: 'eur',
                     title: basket[0].title,
-                    token: stripeResponse.token.id,
+                    stripeToken: stripeResponse.token.id,
                 },
             );
 
+            console.log('la réponse du serveur est ===>', response.data);
             if (response.data) {
                 setIsPaid(true);
             } else {
@@ -34,18 +36,19 @@ const CheckoutForm = ({ total, userToken, basket }) => {
             }
         } catch (error) {
             console.log(error.message);
+            console.log(error.reponse);
         }
     };
 
     return isPaid ? (
         <p>Merci pour votre achat.</p>
     ) : (
-        <form onSubmit={handleSubmit}>
+        <>
             <CardElement />
-            <button type="submit" disabled={!stripe}>
+            <button type="submit" disabled={!stripe} onClick={handleSubmit}>
                 Paiement
             </button>
-        </form>
+        </>
     );
 };
 

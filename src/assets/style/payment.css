@@ -31,3 +31,12 @@
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
+.payment-page form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.payment-page form button {
+    margin: 0 auto;
+}
