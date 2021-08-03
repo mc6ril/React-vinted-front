@@ -17,8 +17,8 @@ const Basket = ({ basket, total, setTotal }) => {
         // <div className="wrapper">
         <div className="basket wrapper">
             <h1>Panier</h1>
-            {basket.length > 0 && (
-                <div className="shop">
+            <div className="shopping">
+                <div className="right-col">
                     <div className="payment-info">
                         <div className="top-payment">
                             <p>
@@ -49,50 +49,51 @@ const Basket = ({ basket, total, setTotal }) => {
                         </div>
                     </div>
                 </div>
-            )}
 
-            <div className="shopping-list">
-                {basket.map((list) => {
-                    return (
-                        <div className="product" key={list.title}>
-                            <div className="left-col">
-                                <img src={list.picture} alt={list.picture} />
-                            </div>
-                            <div className="right-col">
-                                <div>
-                                    <h4>{list.title}</h4>
-                                    <p>Taille: {list.size}</p>
+                <div className="left-col">
+                    {basket.map((list) => {
+                        return (
+                            <div className="product" key={list.title}>
+                                <div className="left">
+                                    <img src={list.picture} alt={list.picture} />
                                 </div>
-                                <div className="buttons">
-                                    <button
-                                        onClick={() => {
-                                            shopValue > 1 && setShopValue(shopValue - 1);
-                                        }}
-                                    >
-                                        -
-                                    </button>
-                                    <span>
-                                        {shopValue === 1
-                                            ? list.product_number
-                                            : shopValue}
-                                    </span>
-                                    <button
-                                        onClick={() => {
-                                            setShopValue(shopValue + 1);
-                                        }}
-                                    >
-                                        +
-                                    </button>
-                                </div>
+                                <div className="right">
+                                    <div>
+                                        <h4>{list.title}</h4>
+                                        <p>Taille: {list.size}</p>
+                                    </div>
+                                    <div className="buttons">
+                                        <button
+                                            onClick={() => {
+                                                shopValue > 1 &&
+                                                    setShopValue(shopValue - 1);
+                                            }}
+                                        >
+                                            -
+                                        </button>
+                                        <span>
+                                            {shopValue === 1
+                                                ? list.product_number
+                                                : shopValue}
+                                        </span>
+                                        <button
+                                            onClick={() => {
+                                                setShopValue(shopValue + 1);
+                                            }}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
 
-                                <p>{list.price}€</p>
+                                    <p>{list.price}€</p>
+                                </div>
                             </div>
-                        </div>
-                    );
-                })}
-                {basket.length > 0 && (
-                    <Link to="/offers"> &larr; Continuer mes achats</Link>
-                )}
+                        );
+                    })}
+                    {basket.length > 0 && (
+                        <Link to="/offers"> &larr; Continuer mes achats</Link>
+                    )}
+                </div>
             </div>
         </div>
     );

@@ -52,7 +52,9 @@ const Offer = ({ value, setValue, basket, setBasket }) => {
                                 <p>{data.product_description}</p>
                             </div>
 
-                            <button>{data.product_details[1].TAILLE}</button>
+                            <button className="white-button">
+                                {data.product_details[1].TAILLE}
+                            </button>
 
                             <div className="basket-product">
                                 <div className="buttons">

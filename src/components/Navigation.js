@@ -10,15 +10,15 @@ const Navigation = ({ userToken, setUser, setMenu, menu, value }) => {
                         <li>M.MOUSTACHE</li>
                     </Link>
                     <div className="menu">
-                        <Link to="/offers">
+                        {/* <Link to="/offers">
                             <li>Souliers</li>
-                        </Link>
+                        </Link> */}
                         <Link to="/offers">
                             <li>Baskets</li>
                         </Link>
-                        <Link to="/offers">
+                        {/* <Link to="/offers">
                             <li>Chaussettes</li>
-                        </Link>
+                        </Link> */}
                         <Link to="/brand">
                             <li>La marque</li>
                         </Link>
@@ -49,7 +49,7 @@ const Navigation = ({ userToken, setUser, setMenu, menu, value }) => {
                             </div>
                         )}
                         <Link to="/basket">
-                            <li className="basket-header">
+                            <li className="header-basket">
                                 Panier <span className="basket-value">{value}</span>
                             </li>
                         </Link>
@@ -59,7 +59,12 @@ const Navigation = ({ userToken, setUser, setMenu, menu, value }) => {
 
             <div className="hidden-menu">
                 <ul>
-                    <div className="burger" onClick={() => setMenu(!menu)}>
+                    <div
+                        className="burger"
+                        onClick={() => {
+                            setMenu(!menu);
+                        }}
+                    >
                         <span></span>
                     </div>
                     <Link to="/" className="logo">
@@ -89,7 +94,7 @@ const Navigation = ({ userToken, setUser, setMenu, menu, value }) => {
                             </div>
                         )}
                         <Link to="/basket">
-                            <li className="basket">
+                            <li className="header-basket">
                                 Panier <span className="basket-value">{value}</span>
                             </li>
                         </Link>

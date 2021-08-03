@@ -1,7 +1,6 @@
 .payment-page {
     margin: 100px auto;
     width: 60%;
-    height: 50vh;
     border: 1px solid black;
     position: relative;
 }
@@ -32,11 +31,25 @@
     margin-bottom: 20px;
 }
 
-.payment-page form {
+.payment-page .form-payment {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
 }
-.payment-page form button {
+.payment-page .form-payment button {
     margin: 0 auto;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .payment-page {
+        margin: 100px auto;
+        width: 90%;
+        border: 1px solid black;
+        position: relative;
+    }
 }

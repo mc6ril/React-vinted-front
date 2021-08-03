@@ -52,11 +52,8 @@
     gap: 15px;
     width: 100%;
 }
-
-.right-product-col .basket-product button {
-    background-color: black;
-    color: white;
-    width: calc(100% - 15px - 95px);
+.right-product-col .white-button {
+    min-height: 40px;
 }
 
 .right-product-col .basket-product .buttons {
@@ -67,12 +64,19 @@
     flex-direction: row;
     align-items: center;
 }
+.right-product-col .basket-product button {
+    background-color: black;
+    color: white;
+    width: calc(100% - 15px - 95px);
+    border: none;
+}
 .right-product-col .basket-product .buttons button {
     border: none;
     height: 100%;
     width: 100%;
     background-color: white;
     color: black;
+    min-height: 40px;
 }
 .right-product-col .go-to-basket {
     width: 100%;
@@ -85,6 +89,7 @@
     color: white;
     margin-left: 110px;
     width: calc(100% - 15px - 95px);
+    min-height: 50px;
 }
 
 @media screen and (max-width: 800px) {

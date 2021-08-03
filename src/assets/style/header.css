@@ -76,7 +76,7 @@ nav .buttons a:hover::before {
     transform: scaleX(1);
     transform-origin: bottom right;
 }
-nav .basket-header {
+nav .header-basket {
     display: flex;
     flex-direction: row;
     align-items: center;
