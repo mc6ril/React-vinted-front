@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-const Navigation = ({ userToken, setUser, setMenu, menu }) => {
+const Navigation = ({ userToken, setUser, setMenu, menu, value }) => {
     return (
         <nav className="wrapper">
             <div className="visible-menu">
@@ -49,8 +49,8 @@ const Navigation = ({ userToken, setUser, setMenu, menu }) => {
                             </div>
                         )}
                         <Link to="/basket">
-                            <li className="basket">
-                                Panier <span className="basket-value">0</span>
+                            <li className="basket-header">
+                                Panier <span className="basket-value">{value}</span>
                             </li>
                         </Link>
                     </div>
@@ -90,7 +90,7 @@ const Navigation = ({ userToken, setUser, setMenu, menu }) => {
                         )}
                         <Link to="/basket">
                             <li className="basket">
-                                Panier <span className="basket-value">0</span>
+                                Panier <span className="basket-value">{value}</span>
                             </li>
                         </Link>
                     </div>

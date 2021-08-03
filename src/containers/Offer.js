@@ -1,13 +1,15 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import { useParams } from 'react-router-dom';
 import Loader from '../components/Loader';
 
-const Offer = () => {
+const Offer = ({ value, setValue, basket, setBasket }) => {
     const [data, setData] = useState();
     const [isLoading, setIsLoading] = useState(true);
-    const [value, setValue] = useState(1);
+    const [productValue, setProductValue] = useState(1);
     const { id } = useParams();
+    const history = useHistory();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -56,21 +58,47 @@ const Offer = () => {
                                 <div className="buttons">
                                     <button
                                         onClick={() => {
-                                            value > 1 && setValue(value - 1);
+                                            productValue > 1 &&
+                                                setProductValue(value - 1);
                                         }}
                                     >
                                         -
                                     </button>
-                                    <span>{value}</span>
+                                    <span>{productValue}</span>
                                     <button
                                         onClick={() => {
-                                            setValue(value + 1);
+                                            setProductValue(productValue + 1);
                                         }}
                                     >
                                         +
                                     </button>
                                 </div>
-                                <button>Ajouter au panier</button>
+                                <button
+                                    onClick={() => {
+                                        const newObj = [...basket];
+                                        newObj.push({
+                                            title: data.product_name,
+                                            size: data.product_details[1].TAILLE,
+                                            product_number: productValue,
+                                            price: data.product_price.toFixed(2),
+                                            id: data.id,
+                                            picture: data.product_image.secure_url,
+                                        });
+                                        setValue(value + 1);
+                                        setBasket(newObj);
+                                    }}
+                                >
+                                    Ajouter au panier
+                                </button>
+                            </div>
+                            <div className="go-to-basket">
+                                <button
+                                    onClick={() => {
+                                        history.push('/basket');
+                                    }}
+                                >
+                                    Achetez maintenant
+                                </button>
                             </div>
                         </div>
                     </div>

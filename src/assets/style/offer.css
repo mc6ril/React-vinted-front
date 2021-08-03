@@ -74,6 +74,18 @@
     background-color: white;
     color: black;
 }
+.right-product-col .go-to-basket {
+    width: 100%;
+    height: 50px;
+}
+.right-product-col .go-to-basket button {
+    border: none;
+    height: 100%;
+    background-color: black;
+    color: white;
+    margin-left: 110px;
+    width: calc(100% - 15px - 95px);
+}
 
 @media screen and (max-width: 800px) {
     .product-content {

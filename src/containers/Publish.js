@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import Dropzone from 'react-dropzone';
 import { useHistory } from 'react-router';
+import { Redirect } from 'react-router-dom';
 
 const Publish = ({ userToken }) => {
     const [files, setFiles] = useState({});
@@ -15,8 +16,6 @@ const Publish = ({ userToken }) => {
     const [city, setCity] = useState('');
     const [price, setPrice] = useState(0);
     const history = useHistory();
-
-    console.log('le file est : ', files);
 
     // Creation d'un nouveau produit
     let newProduct = new FormData();
@@ -45,9 +44,11 @@ const Publish = ({ userToken }) => {
                     },
                 },
             );
-            if (response.data._id) {
+            console.log(response.data.newOffer);
+
+            if (response.data.newOffer._id) {
                 // redirectoin vers l'offre
-                history.push(`/offer/${response.data._id}`);
+                history.push(`/offer/${response.data.newOffer._id}`);
             } else {
                 alert('Une erreur est survenue, veuillez réssayer');
             }
@@ -57,7 +58,7 @@ const Publish = ({ userToken }) => {
         }
     };
     // Formulaire de création de nouveau produit
-    return (
+    return userToken ? (
         <section>
             <form action="POST" onSubmit={onHandleSubmit} className="publish">
                 <h1>Nouveau produit à ajouter à la collection </h1>
@@ -122,8 +123,9 @@ const Publish = ({ userToken }) => {
                 />
                 <input type="submit" value="Ajouter" />
             </form>
-            {}
         </section>
+    ) : (
+        <Redirect to="/login" />
     );
 };
 

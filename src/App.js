@@ -6,11 +6,13 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Basket from './containers/Basket';
 import Brand from './containers/Brand';
 import Homepage from './containers/Hompage';
 import Login from './containers/Login';
 import Offer from './containers/Offer';
 import Offers from './containers/Offers';
+import Payment from './containers/Payment';
 import Publish from './containers/Publish';
 import Signup from './containers/Signup';
 import Stores from './containers/Stores';
@@ -20,6 +22,9 @@ library.add(faUser, faSearch, faShoppingBasket);
 function App() {
     const [userToken, setUserToken] = useState(Cookies.get('userToken' || null));
     const [menu, setMenu] = useState(false);
+    const [value, setValue] = useState(0);
+    const [basket, setBasket] = useState([]);
+    const [total, setTotal] = useState(0);
 
     const setUser = (token) => {
         if (token) {
@@ -42,6 +47,8 @@ function App() {
                 setUser={setUser}
                 setMenu={setMenu}
                 menu={menu}
+                value={value}
+                setValue={setValue}
             />
             {menu ? (
                 <nav className="slider-menu">
@@ -83,7 +90,12 @@ function App() {
                         <Publish userToken={userToken} />
                     </Route>
                     <Route exact path="/offer/:id">
-                        <Offer />
+                        <Offer
+                            value={value}
+                            setValue={setValue}
+                            basket={basket}
+                            setBasket={setBasket}
+                        />
                     </Route>
                     <Route path="/login">
                         <Login setUser={setUser} />
@@ -96,6 +108,12 @@ function App() {
                     </Route>
                     <Route path="/brand">
                         <Brand />
+                    </Route>
+                    <Route path="/basket">
+                        <Basket basket={basket} total={total} setTotal={setTotal} />
+                    </Route>
+                    <Route path="/payment">
+                        <Payment total={total} userToken={userToken} basket={basket} />
                     </Route>
                 </Switch>
             )}

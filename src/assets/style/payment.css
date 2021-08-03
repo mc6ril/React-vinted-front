@@ -1,0 +1,33 @@
+.payment-page {
+    margin: 100px auto;
+    width: 60%;
+    height: 50vh;
+    border: 1px solid black;
+    position: relative;
+}
+.payment-page::after {
+    position: absolute;
+    top: 40%;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+
+.payment-page .top-payment,
+.payment-page .payment {
+    height: 40%;
+    width: 100%;
+    padding: 30px;
+}
+.payment-page .top-payment h3 {
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.payment-page .top-payment p,
+.payment-page .payment p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-    width: calc(100vw - (350px * 2));
+    width: calc(100% - (350px * 2));
     margin: 0 auto;
 }
 .separate {
@@ -47,21 +47,20 @@ input:focus {
 
 @media screen and (max-width: 1500px) {
     .wrapper {
-        width: calc(100vw - (180px * 2));
+        width: calc(100% - (180px * 2));
         margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 1350px) {
     .wrapper {
-        width: calc(100vw - (90px * 2));
+        width: calc(100% - (90px * 2));
         margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 1000px) {
     .wrapper {
-        width: 100vw;
-        padding: 2vw;
+        width: 90vw;
     }
 }
