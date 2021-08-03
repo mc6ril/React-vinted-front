@@ -16,8 +16,6 @@ const CheckoutForm = ({ total, userToken, basket }) => {
                 name: 'Je suis un user',
             });
 
-            console.log(stripeResponse);
-
             const response = await axios.post(
                 'https://project-vinted-api-backend.herokuapp.com/payment',
                 {
@@ -27,8 +25,6 @@ const CheckoutForm = ({ total, userToken, basket }) => {
                     stripeToken: stripeResponse.token.id,
                 },
             );
-
-            console.log('la réponse du serveur est ===>', response.data);
             if (response.data) {
                 setIsPaid(true);
             } else {
