@@ -39,12 +39,12 @@ const CheckoutForm = ({ total, userToken, basket }) => {
     return isPaid ? (
         <p>Merci pour votre achat.</p>
     ) : (
-        <div className="form-payment">
+        <form className="form-payment" onSubmit={handleSubmit}>
             <CardElement />
-            <button type="submit" disabled={!stripe} onClick={handleSubmit}>
+            <button type="submit" disabled={!stripe}>
                 Paiement
             </button>
-        </div>
+        </form>
     );
 };
 

@@ -10,7 +10,8 @@
     margin: 10vh auto 6vh;
 }
 
-form {
+.login form,
+.signup form {
     display: flex;
     flex-direction: column;
     align-items: center;

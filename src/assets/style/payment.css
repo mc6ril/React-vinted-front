@@ -31,10 +31,11 @@
     margin-bottom: 20px;
 }
 
-.payment-page .form-payment {
+.payment-page form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: normal;
     gap: 20px;
 }
 .payment-page .form-payment button {
