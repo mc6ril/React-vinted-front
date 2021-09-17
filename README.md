@@ -40,7 +40,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 # Vinted like 
 Welcome to M.Moustache. This is a __small replica__ from the original website : https://www.m-moustache.com/fr/homme.
 The origin of this was a project during my last formation into the Reacteur in Paris. 
-The project was to create a website, calling an __API__ made by oursalves in order to __create new stuffs to add into the basket, et add a payment feature using Stripe.
+The project was to create a website, calling an __API__ made by oursalves in order to __create new stuffs to add into the basket, and add a payment feature using Stripe.
 This website is subject to modification to implement new pages and build a real replica.__
 
 All __feedback is always welcome__ as it is one of my first react project !
